@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context="com.olami.musicdemo.MusicActivity" >
+
+    <TextView
+        android:id="@+id/tv_inputText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="输入：" />
+    
+    <TextView
+        android:id="@+id/tv_volume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_inputText"
+        android:layout_below="@+id/tv_inputText"
+        android:layout_marginTop="40dp"
+        android:text="音量：" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_volume"
+        android:layout_marginTop="20dp"
+        android:maxLines="15"
+        android:ellipsize="end"
+        android:text="服务器返回sentence："
+        android:visibility="visible" />
+
+    <com.olami.musicdemo.MusicView
+        android:id="@+id/music_view"
+        android:layout_width="fill_parent"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        >
+    </com.olami.musicdemo.MusicView>
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_above="@+id/btn_stop"
+        android:layout_alignLeft="@+id/tv_inputText"
+        android:layout_marginBottom="10dp"
+        android:layout_toLeftOf="@+id/btn_send"
+        android:background="#E7E7E7"
+        android:singleLine="true"
+        android:text="上海的天气" />    
+        
+     <Button
+        android:id="@+id/btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/et_content"
+        android:layout_alignBottom="@+id/et_content"
+        android:layout_alignParentRight="true"
+        android:text="提交" />
+     
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="开始" />
+ 
+    <Button
+        android:id="@+id/btn_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/et_content"
+        android:layout_alignParentBottom="true"
+        android:text="停止" />
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/et_content"
+        android:text="取消" />
+
+</RelativeLayout>
